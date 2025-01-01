@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# script for installing git on your machine
+# script for installing crontab on your machine
 
 user=$(id -u)
 if [ $user -ne 0 ]
