@@ -5,19 +5,19 @@
 user=$(id -u)
 if [ $user -ne 0 ]
 then
-    echo "You are not the root user, get the root privileges to install mysql on your system"
+    echo "You are not the root user, get the root privileges to install crontab on your system"
 else
-    dnf list installed mysql
+    dnf list installed cronie
     if [ $? -eq 0 ]
     then
-        echo "mysql is already installed on your system"
+        echo "crontab is already installed on your system"
     else
-        dnf install mysql-server -y
+        dnf install cronie -y
         if [ $? -eq 0 ]
         then
-            echo " mysql is installed successfully on your system "
+            echo " crontab is installed successfully on your system "
         else
-            echo "mysql installation failed"
+            echo "crontab installation failed"
         fi
     fi
 fi
